@@ -12,12 +12,12 @@
     <title>NDVImetabolism</title>
   </head>
   <body>
-    <header>
+    <header >
     <!--navbar-->
       <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="header-nav">
       <div class="container-fluid">
       <a class="navbar-brand" href="index.html">NDVImetabolism</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="NavbarColl">
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -37,41 +37,27 @@
       </nav>
     </header>
     <!--Title-->
-    <div class="container">
-     <div class="row">
-      <section class="col-lg-3 col-md-3 col-sm-3 col-xm-3">
-        <p><img src="upiita-logo.png" width="125"></p>
+      <h1>Controls</h1>
+    <!--Controls-->
+      <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xm-12">
+      <div class="box">
+      <h2>Move robot</h2><br><br>
+      <section>
+        <p><button type="button" class="btn btn-outline-primary" id="Control" onclick="Move('MoveXUp')">Up</button></p>
+        <br><p><button type="button" class="btn btn-outline-primary" id="Control" onclick="Move('MoveYLeft')">Left</button>
+        <button type="button" class="btn btn-outline-primary" id="Control" onclick="Move('MoveYRight')">Right</button></p><br>
+        <p><button type="button" class="btn btn-outline-primary" id="Control" onclick="Move('MoveXDown')">Down</button></p>
       </section>
-      <section class="col-lg-6 col-md-6 col-sm-6 col-xm-6">
-        <h1>Instituto Politécnico Nacional</h1>        
-      </section>
-      <section class="col-lg-3 col-md-3 col-sm-3 col-xm-3">
-        <p><img src="ipn.png" width="150"></p>
-      </section> 
       </div></div>
-      <div class="container">
-        <div class="row">
-          <section class="col-lg-12 col-md-12 col-sm-12 col-xm-12">
-            <h1>Unidad Profesional Interdisciplinaria en Ingeniería y Tecnologías Avanzadas</h1>
-          </section>
-          <section class="col-lg-12 col-md-12 col-sm-12 col-xm-12">
-            <h3>Análisis de imágenes multiespectrales como método no invasivo para determinar el estado metabólico de plantas en un invernadero hidropónico</h3>
-          </section>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <section class="col-lg-4 col-md-4 col-sm-4 col-xm-4">
-            <a href="Control.html" class="btn btn-outline-primary" id="Start">Controls</a>
-          </section>
-          <section class="col-lg-4 col-md-4 col-sm-4 col-xm-4">
-            <a href="Photo.html" class="btn btn-outline-primary" id="Start">Photos</a>
-          </section>
-          <section class="col-lg-4 col-md-4 col-sm-4 col-xm-4">
-            <a href="#Authors" class="btn btn-outline-primary" id="Start">Authors</a>
-          </section>
-        </div>
-      </div>
+    <!--Photos-->
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xm-12">
+      <div class="box">
+      <h2>Control the camera</h2><br>
+      <p><iframe width="560" height="315" src="https://www.youtube.com/embed/cH_yrEmJabE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="col-lg-6 col-md-6 col-sm-12 col-xm-12" id="Video"></iframe></p>
+      <p><button type="button" class="btn btn-outline-primary" id="Control" onclick="TakePhoto()">Take Photo</button></p>
+      </div></div>
+    </div>
     <!--Authors box-->
     <footer class="panel-footer" id="Authors">
       <div class="container">
