@@ -116,6 +116,11 @@ img{
 	#Video{
 		width: 550px;
 	}
+	#carouselbox
+	{
+	margin: 5px;
+	width: 98%;
+	}
 }
 @media (min-width: 992px) and (max-width: 1199px){
 	#Video{
