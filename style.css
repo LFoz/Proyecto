@@ -1,7 +1,7 @@
 /*All Body*/
 body{
 	font-family: Arial,  Helvatica, sans-serif;
-	background-color: #98FB98;
+	background: linear-gradient(#2196F3, #FFC107);
 	color: black;
 	font-size: 16px;
 
@@ -98,13 +98,12 @@ img{
 	box-shadow: 0 1px 5px 1px #cccccc;
 }
 .nav-item:hover{
-	box-shadow: 0 1px 5px 1px #ADFF2F;
+	box-shadow: 0 1px 5px 1px #48A0F8;
 }
 /*Copyright*/
 #Copy{
 	margin: 5px;
 	color: white;
-
 }
 
 .row{
@@ -134,8 +133,15 @@ img{
 	}
 }
 @media (max-width: 479px){
-	/*Video*/
 	#Video{
 		width: 340px;
 	}
+}
+/*spiner*/
+.container1{
+	opacity: 0;
+	transition: 1s;
+}
+#loadbox{
+	height: 650px;
 }

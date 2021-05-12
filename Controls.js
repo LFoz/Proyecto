@@ -20,4 +20,11 @@ function Move(v){
 //Photo alert
 function TakePhoto(){
 	alert("Photo Taken");
+	console.log(Shot);
 }
+
+$(window).on("load",function () {
+  $(".container1").css("opacity",1)
+  $("#precarga").css("display", "none");
+  $("#loadbox").css("height", 0);
+  });
