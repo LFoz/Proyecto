@@ -4,10 +4,11 @@ body{
 	background: linear-gradient(#2196F3, #FFC107);
 	color: black;
 	font-size: 16px;
+	margin-top: 60px;
 
 }
 
-/*Especific Text*/
+/*Text*/
 h1, h3{
 	margin: 15px;
 	text-align: center;
@@ -21,16 +22,6 @@ h2{
 	color: white;
 }
 
-p{
-	text-align: center;
-	font-size: 25px;
-	color: white;
-}
-
-a{
-	text-align: center;
-}
-
 h4{
 	text-align: center;
 	color: black;
@@ -41,36 +32,53 @@ h4{
 	width: 50%;
 
 }
-img{
-	margin: 5px;
+
+p{
+	text-align: center;
+	font-size: 25px;
+	color: white;
 }
+
+a{
+	text-align: center;
+}
+/*Text end*/
+
 /*Buttons*/
+/*Control to move*/
 #Control{
 	margin: 10px;
 	width: 40%;
 	height: 100px;
 }
 
+/*Controls of index*/
 #Start{
 	margin: 10px;
 	width: 80%;
 	height: 50px;
 }
-#PhotoTa{
-	margin: 10px;
-	width: 90%;
-	height: 150px;
-}
+
+/*All photos button*/
 #More{
 	margin: 10px;
 	width: 50%;
 	height: 50px;
 }
-#Date{
+/*Buttons end*/
+
+/*Photos*/
+#PhotoTa{
 	margin: 10px;
-	width: 80%;
-	height: 30px;
+	width: 90%;
+	height: 150px;
 }
+
+/*All images*/
+img{
+	margin: 5px;
+}
+
 /*Author Box*/
 .imgRed{
 	width:155px;
@@ -79,7 +87,17 @@ img{
     border:5px solid black;
     margin: 5px;
 }
+/*Photos end*/
 
+/*Containers*/
+/*Date container*/
+#Date{
+	margin: 10px;
+	width: 80%;
+	height: 30px;
+}
+
+/*Authors box*/
 .panel-footer{
   margin-top: 30px;
   padding-top: 35px;
@@ -88,6 +106,7 @@ img{
   border-top: 0;
 }
 
+/*Authors box title*/
 .panel-footer div.row {
   margin-bottom: 35px;
 }
@@ -96,23 +115,29 @@ img{
 #AuthorPhoto:hover {
 	margin: 5px;
 	box-shadow: 0 1px 5px 1px #cccccc;
+	cursor: pointer;
 }
+
+/*Authors box hover*/
 .nav-item:hover{
 	box-shadow: 0 1px 5px 1px #48A0F8;
-}
-/*Copyright*/
-#Copy{
-	margin: 5px;
-	color: white;
 }
 
 .row{
 	 margin-right: 0px; 
 	 margin-left: 0px;
 }
-/*Media*/
+
+/*Containers end*/
+
+/*Copyright*/
+#Copy{
+	margin: 5px;
+	color: white;
+}
+
+/*video box*/
 @media (min-width: 1200px){
-	/*Video*/
 	#Video{
 		width: 550px;
 	}
@@ -142,6 +167,8 @@ img{
 		width: 340px;
 	}
 }
+/*video box end*/
+
 /*spiner*/
 .container1{
 	opacity: 0;
@@ -150,3 +177,4 @@ img{
 #loadbox{
 	height: 650px;
 }
+/*spiner end*/

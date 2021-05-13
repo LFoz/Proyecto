@@ -1,6 +1,6 @@
+//Move
 var MoveX=0,MoveY=0;
 var Shot=1;
-//Move
 function Move(v){
     switch(v) {
       case 'MoveXUp':
@@ -17,12 +17,14 @@ function Move(v){
         break;
     }
 }
-//Photo alert
+
+//Photo
 function TakePhoto(){
 	alert("Photo Taken");
 	console.log(Shot);
 }
 
+//load funtion
 $(window).on("load",function () {
   $(".container1").css("opacity",1)
   $("#precarga").css("display", "none");
