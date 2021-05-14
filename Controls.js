@@ -26,7 +26,32 @@ function TakePhoto(){
 
 //load funtion
 $(window).on("load",function () {
-  $(".container1").css("opacity",1)
+  $(".container1").css("opacity",1);
   $("#precarga").css("display", "none");
   $("#loadbox").css("height", 0);
   });
+
+//nav collapse funtion
+$(function () {
+  $("#navbarToggle").blur(function (event) {
+    var screenWidth = window.innerWidth;
+    if (screenWidth < 768) {
+      $("#navbarToggle").removeClass('navbar-toggler').addClass('navbar-toggler collapsed');
+      $("#navbarSupportedContent").collapse('hide');
+    }
+  });
+});
+
+//nav move
+$(document).ready(function () {
+  $(window).on('scroll', function () {
+   if($(window).scrollTop() > 30){
+      $("#navarnavigation").removeClass('sticky-top').addClass('fixed-top');
+      $("body").css("margin-top",60);
+   }else{
+      $("#navarnavigation").removeClass('fixed-top').addClass('sticky-top');
+      $("body").css("margin-top",0);
+   }
+  });
+  
+});
