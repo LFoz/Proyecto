@@ -18,11 +18,6 @@ function Move(v){
     }
 }
 
-//Photo
-function TakePhoto(){
-	alert("Photo Taken");
-	console.log(Shot);
-}
 
 //load funtion
 $(window).on("load",function () {
@@ -54,4 +49,52 @@ $(document).ready(function () {
    }
   });
   
+});
+
+//Camera
+
+$(document).ready(function() {
+  //Start Camera
+  Video.unavalable = false;
+  $("#StartCamara").click(function () {
+    if(Video.unavalable == false){
+    navigator.getMedia = ( navigator.getUserMedia || 
+                          navigator.webkitGetUserMedia||
+                          navigator.mozGetUserMedia ||
+                          navigator.msGetUserMedia);
+    navigator.getMedia({video: true}, function (stream) { 
+    var Video = document.getElementById("Video");//permission granted
+    Video.srcObject = stream;
+    Video.play();
+    Video.unavalable = true;
+    }, function () {
+    alert("Camera Not Avaiable"); //permission not granted
+    });      
+  }else{
+    alert("The camera is on");
+  }
+  });
+  //Take Photo
+  $("#TakePhoto").click(function () {
+    if (Video.unavalable == true) {
+      $("#CamOff").css("display", "none");  //Camera on
+      $("#LookPhoto").css("display", "true");
+      var Phot;
+      Phot = document.getElementById("LookPhoto");
+      var context = Phot.getContext('2d');
+        context.drawImage(Video, 0, 0, 640, 480);
+    }else{
+      $("#CamOff").css("display", "true");  //Camera off
+      $("#LookPhoto").css("display", "none");
+    }
+  });
+  //Stop Camera
+  $("#StopCamara").click(function () {
+    if (Video.unavalable == true) {
+      Video.srcObject.getTracks()[0].stop();
+      Video.unavalable = false;   // Camera on
+    }else{
+      alert("Camera Is Off"); //Camera off
+    }
+  });
 });

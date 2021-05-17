@@ -8,7 +8,7 @@ body{
 }
 
 /*Text*/
-h1, h3{
+h1, h5{
 	margin: 15px;
 	text-align: center;
 	font-size: 30px;
@@ -45,7 +45,7 @@ a{
 
 /*Buttons*/
 /*Control to move*/
-#Control{
+#TakePhoto, #Control, #StartCamara, #StopCamara{
 	margin: 10px;
 	width: 40%;
 	height: 100px;
@@ -116,6 +116,7 @@ img{
 	margin: 5px;
 	box-shadow: 0 1px 5px 1px #cccccc;
 	cursor: pointer;
+	background-color: #2196F3;
 }
 
 /*Authors box hover*/
@@ -128,6 +129,14 @@ img{
 	 margin-left: 0px;
 }
 
+#Video{
+	border: 5px solid black;
+	background-color: gray;
+}
+
+#LookPhoto{
+	width: 460px;
+}
 /*Containers end*/
 
 /*Copyright*/
