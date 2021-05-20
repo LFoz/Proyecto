@@ -12,10 +12,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="Controls.js"></script>
     <!-- Bootstrap CSS, jquery, js and css links ends-->
-
+    <link rel="shortcut icon" href="planta.png">
     <title>NDVImetabolism</title>
   </head>
   <body>
+    <?php
+phpinfo();
+?>
     <!-- loading box-->
     <div class="d-flex justify-content-center" id="loadbox" class="col-lg-12 col-md-12 col-sm-12 col-xm-12">
       <div class="spinner-grow m-5 text-light" role="status" id="precarga" style="width: 4rem; height: 4rem;" role="status">
@@ -37,6 +40,9 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
+              <a class="nav-link active" aria-current="page" id="AutoAnalysis1">Auto Analysis</a>
+            </li>            
+            <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="Control.html">Controls</a>
             </li>
             <li class="nav-item">
@@ -56,13 +62,13 @@
       <div class="container">
         <div class="row">
           <section class="col-lg-3 col-md-3 col-sm-3 col-xm-3">
-            <p><img src="upiita-logo.png" width="125"></p>
+            <p><img src="upiita-logo.png" style="width:125px"></p>
           </section>
           <section class="col-lg-6 col-md-6 col-sm-6 col-xm-6">
             <h1>Instituto Politécnico Nacional</h1>        
           </section>
           <section class="col-lg-3 col-md-3 col-sm-3 col-xm-3">
-            <p><img src="ipn.png" width="150"></p>
+            <p><img src="ipn.png" style="width:150px"></p>
           </section> 
         </div>
       </div>
@@ -112,14 +118,19 @@
       <!--Buttons-->
       <div class="container">
         <div class="row align-items-center">
+          <section class="col-lg-12 col-md-12 col-sm-12">
+            <a ><p><button class="btn btn-success align-items-center Start" id="AutoAnalysis">Auto Analysis</button></p></a>
+          </section>
+        </div>
+        <div class="row align-items-center">
           <section class="col-lg-4 col-md-4 col-sm-4">
-            <a href="Control.html"><p><button class="btn btn-outline-primary align-items-center" id="Start">Controls</button></p></a>
+            <a href="Control.html"><p><button class="btn btn-outline-primary align-items-center Start">Controls</button></p></a>
           </section>
           <section class="col-lg-4 col-md-4 col-sm-4">
-            <a href="Photo.html"><p><button class="btn btn-outline-primary align-items-center" id="Start">Photos</button></p></a>
+            <a href="Photo.html"><p><button class="btn btn-outline-primary align-items-center Start">Photos</button></p></a>
           </section>
           <section class="col-lg-4 col-md-4 col-sm-4">
-            <a href="#Authors"><p><button class="btn btn-outline-primary align-items-center"  id="Start">Authors</button></p></a>
+            <a href="#Authors"><p><button class="btn btn-outline-primary align-items-center Start">Authors</button></p></a>
           </section>
         </div>
       </div>
@@ -129,9 +140,11 @@
       <div class="container">
         <div class="row">
           <section class="col-lg-6 col-md-6">
+            <p>Report</p>
             <iframe src="evaluaci-n-de-los-ecosistemas[1].bin.pdf" style="width:100%; height:400px;" frameborder="0" ></iframe>
           </section>
           <section class="col-lg-6 col-md-6">
+            <p>Slides</p>
             <iframe src="evaluaci-n-de-los-ecosistemas[1].bin.pdf" style="width:100%; height:400px;" frameborder="0" ></iframe>
           </section>
         </div>

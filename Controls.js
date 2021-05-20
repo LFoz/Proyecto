@@ -3,21 +3,95 @@ var MoveX=0,MoveY=0;
 var Shot=1;
 function Move(v){
     switch(v) {
-      case 'MoveXUp':
-        console.log(++MoveX);
-        break;
-      case 'MoveXDown':
-        console.log(--MoveX);
-        break;
-      case 'MoveYLeft':
-        console.log(--MoveY);
-        break;
-      case 'MoveYRight':
+      case 'MoveYUp':
+      if (MoveY==13) {
+        alert("No more move");
+      }else{
         console.log(++MoveY);
+      }
+        break;
+      case 'MoveYDown':
+      if (MoveY==0) {
+        alert("No more move");
+      }else{
+        console.log(--MoveY);
+      }
+        break;
+      case 'MoveXLeft':
+      if (MoveX==0) {
+        alert("No more move");
+      }else{
+        console.log(--MoveX);
+      }
+        break;
+      case 'MoveXRight':
+      if (MoveX==25) {
+        alert("No more move");
+      }else{
+        console.log(++MoveX);
+      }
         break;
     }
 }
 
+//Auto Analysis function
+$(document).ready(function () {
+  $("#AutoAnalysis").click(function () {
+    do{
+      for(var i = 0; i <=12; i++){
+        MoveX=MoveX+2         
+        console.log("Movimiento en X="+MoveX);
+      }
+      if (MoveX==26) {
+        MoveY=MoveY+2;        
+        console.log("Y="+MoveY);
+        for (var i = 0; i <=12; i++) {
+        MoveX=MoveX-2;        
+        console.log("Movimiento en X="+MoveX);
+        }
+      }if(MoveX===0&&MoveY<14){
+        MoveY=MoveY+2;        
+        console.log("Y="+MoveY);
+      }
+      }while(MoveY<14);
+      if (MoveY==14) {
+        alert("Start to Analysis");
+        MoveX=0;
+        MoveY=0;
+        console.log("Movimiento en X="+MoveX);
+        console.log("Y="+MoveY);
+      }
+  });
+});
+
+$(document).ready(function () {
+  $("#AutoAnalysis1").click(function () {
+      do{
+      for(var i = 0; i <=12; i++){
+        MoveX=MoveX+2         
+        console.log("Movimiento en X="+MoveX);
+      }
+      if (MoveX==26) {
+        MoveY=MoveY+2;        
+        console.log("Y="+MoveY);
+        for (var i = 0; i <=12; i++) {
+        MoveX=MoveX-2;        
+        console.log("Movimiento en X="+MoveX);
+        }
+      }if(MoveX===0&&MoveY<14){
+        MoveY=MoveY+2;        
+        console.log("Y="+MoveY);
+      }
+      }while(MoveY<14);
+      if (MoveY==14) {
+        alert("Start to Analysis");
+        MoveX=0;
+        MoveY=0;
+        console.log("Movimiento en X="+MoveX);
+        console.log("Y="+MoveY);
+      }
+  });
+});
 
 //load funtion
 $(window).on("load",function () {
@@ -48,14 +122,17 @@ $(document).ready(function () {
       $("body").css("margin-top",0);
    }
   });
-  
 });
 
 //Camera
 
 $(document).ready(function() {
   //Start Camera
+  var Video = document.getElementById("Video"),
+  canvas = document.getElementById("LookPhoto"),
+  photo = document.getElementById('photo');
   Video.unavalable = false;
+
   $("#StartCamara").click(function () {
     if(Video.unavalable == false){
     navigator.getMedia = ( navigator.getUserMedia || 
@@ -63,8 +140,7 @@ $(document).ready(function() {
                           navigator.mozGetUserMedia ||
                           navigator.msGetUserMedia);
     navigator.getMedia({video: true}, function (stream) { 
-    var Video = document.getElementById("Video");//permission granted
-    Video.srcObject = stream;
+    Video.srcObject = stream; //permission granted
     Video.play();
     Video.unavalable = true;
     }, function () {
@@ -74,27 +150,46 @@ $(document).ready(function() {
     alert("The camera is on");
   }
   });
-  //Take Photo
+
+  //Take Photo function "behavior"
   $("#TakePhoto").click(function () {
     if (Video.unavalable == true) {
-      $("#CamOff").css("display", "none");  //Camera on
-      $("#LookPhoto").css("display", "true");
+      $("#CamOff").css("opacity", 0);  //Camera on
+      $("#LookPhoto").css("opacity", 1);
+      $("#buttonbox").css("opacity", 1);      
       var Phot;
       Phot = document.getElementById("LookPhoto");
       var context = Phot.getContext('2d');
-        context.drawImage(Video, 0, 0, 640, 480);
+      context.drawImage(Video, 0, 0, 640, 480);
     }else{
-      $("#CamOff").css("display", "true");  //Camera off
-      $("#LookPhoto").css("display", "none");
+      $("#CamOff").css("opacity", 1);  //Camera off
+      $("#LookPhoto").css("opacity", 0);
+      $("#buttonbox").css("opacity", 0);
     }
   });
+
+  //Take and save photo
+  $("#Analysis").click(function () {
+    var data = canvas.toDataURL();
+    var TimeBefore = Date.now();
+    var Today = new Date (TimeBefore);
+    var name = Today.toLocaleDateString();
+    var link =document.createElement('a');
+    link.href= data;
+    link.download=name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    console.log("HI"); 
+  });
+
   //Stop Camera
   $("#StopCamara").click(function () {
     if (Video.unavalable == true) {
       Video.srcObject.getTracks()[0].stop();
       Video.unavalable = false;   // Camera on
     }else{
-      alert("Camera Is Off"); //Camera off
+      alert("Camera Is Off");//Camera off
     }
   });
 });
