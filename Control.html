@@ -66,7 +66,7 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xm-12">
           <div class="box">
-            <h2>Move robot</h2><br><br>
+            <h2>Move robot</h2><br><br><br><br>
             <section>
               <p><button type="button" class="btn btn-outline-primary" id="Control" onclick="Move('MoveYUp')">Up</button></p>
               <br><p><button type="button" class="btn btn-outline-primary" id="Control" onclick="Move('MoveXLeft')">Left</button>
@@ -85,6 +85,8 @@
             </section>
             <section class="col-lg-12 col-md-12 col-sm-12 col-xm-12">
             <p><video src="" id="Video">
+            </video>
+            <video src="" id="Video2" style="display: none">
             </video></p>
             </section>
             <section class="col-lg-12 col-md-12 col-sm-12 col-xm-12">
@@ -99,10 +101,10 @@
                     <div class="modal-body">
                       <h5 id="CamOff">The Camera is Off</h5>
                       <canvas id="LookPhoto" width="640" height="480"></canvas>
+                      <canvas id="LookPhoto2" width="640" height="480" style="display: none"></canvas>
                    </div>
                     <div class="modal-footer" id="buttonbox">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Again</button>
-                      <button type="button" class="btn btn-primary" id="Analysis">Analysis</button>
                     </div>
                   </div>
                 </div>
@@ -125,7 +127,7 @@
             </section>
             <section class="col-lg-6 col-md-6 col-sm-12 col-xm-12">
               <p><img src="Ahtf.jpg" class="imgRed" alt="This is a meaningful image description" id="AuthorPhoto"></p>
-              <p>Ciro</p>
+              <p>Ciro Alejandro Gil Sánchez</p>
             </section>
           </div>
           <div class="text-center" id="Copy">&copy; Copyright IPN - UPITA</div>

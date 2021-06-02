@@ -128,12 +128,12 @@ img{
 	 margin-left: 0px;
 }
 
-#Video{
+#Video, #Video2{
 	border: 5px solid black;
 	background-color: gray;
 }
 
-#LookPhoto{
+#LookPhoto, #LookPhoto2{
 	width: 460px;
 }
 /*Containers end*/
