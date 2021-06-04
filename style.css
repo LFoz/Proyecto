@@ -8,17 +8,22 @@ body{
 }
 
 /*Text*/
-h1,h3{
+h1{
 	margin: 15px;
 	text-align: center;
 	font-size: 30px;
 }
 
+h3{
+	margin: 15px;
+	text-align: center;
+	font-size: 25px;
+}
+
 h2{
 	text-align: center;
-	font-size: 30px;
+	font-size: 25px;
 	margin: 10px;
-	color: white;
 }
 
 h4{
@@ -36,7 +41,11 @@ h5{
 	text-align: center;
 	font-size: 20px;
 }
-
+h6{
+	margin: 15px;
+	text-align: center;
+	font-size: 27px;
+}
 p{
 	text-align: center;
 	font-size: 25px;
@@ -46,6 +55,12 @@ p{
 a{
 	text-align: center;
 }
+#Databox{
+	margin: 5px;
+	border: 2px solid black;
+	text-align: center;
+	font-size: 23px;
+}
 /*Text end*/
 
 /*Buttons*/
@@ -53,7 +68,7 @@ a{
 #TakePhoto, #Control, #StartCamara, #StopCamara{
 	margin: 10px;
 	width: 40%;
-	height: 100px;
+	height: 75px;
 }
 
 /*Controls of index*/
@@ -110,6 +125,9 @@ img{
 }
 
 /*Photos Author*/
+#Author{
+	color:white;
+}
 #AuthorPhoto:hover {
 	margin: 5px;
 	box-shadow: 0 1px 5px 1px #cccccc;
@@ -136,6 +154,14 @@ img{
 #LookPhoto, #LookPhoto2{
 	width: 460px;
 }
+
+#carouselbox{
+	width: 680px;
+}
+
+#carouselbox2{
+	width: 600px;
+}
 /*Containers end*/
 
 /*Copyright*/
@@ -147,12 +173,7 @@ img{
 /*video box*/
 @media (min-width: 1200px){
 	#Video{
-		width: 550px;
-	}
-	#carouselbox
-	{
-	margin: 5px;
-	width: 98%;
+		width: 350px;
 	}
 }
 @media (min-width: 992px) and (max-width: 1199px){

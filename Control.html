@@ -61,27 +61,40 @@
       <div class="row">
         <div class="box">
           <section>
-            <a ><p><button class="btn btn-success align-items-center Start" style="width: 90%" id="AutoAnalysis">Auto Analysis</button></p></a>            
+            <a><p><button class="btn btn-light align-items-center Start" style="width: 50%" id="AutoAnalysis">Auto Analysis</button></p></a>
+          </section>
+        </div>
+          <div class="box col-lg-2 col-md-2 col-sm-2 col-xm-2">
+          <section class="align-items-center">
+          </section>
+        </div>
+        <div class="box col-lg-8 col-md-8 col-sm-8 col-xm-8">
+          <section class="align-items-center" id="Databox">
+              Data:<br>
+              <h5>GreenHouse Temperature:<br>
+              Sistem Temperature:<br>
+              X Position:<br>
+              Y Position:</h5>
           </section>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xm-12">
           <div class="box">
-            <h2>Move robot</h2><br><br><br><br>
+            <h2>Move robot</h2><br>
             <section>
-              <p><button type="button" class="btn btn-outline-primary" id="Control" onclick="Move('MoveYUp')">Up</button></p>
-              <br><p><button type="button" class="btn btn-outline-primary" id="Control" onclick="Move('MoveXLeft')">Left</button>
-              <button type="button" class="btn btn-outline-primary" id="Control" onclick="Move('MoveXRight')">Right</button></p><br>
-              <p><button type="button" class="btn btn-outline-primary" id="Control" onclick="Move('MoveYDown')">Down</button></p>
+              <p><button type="button" class="btn btn-light" id="Control" onclick="Move('MoveYUp')">Up</button></p>
+              <br><p><button type="button" class="btn btn-light" id="Control" onclick="Move('MoveXLeft')">Left</button>
+              <button type="button" class="btn btn-light" id="Control" onclick="Move('MoveXRight')">Right</button></p><br>
+              <p><button type="button" class="btn btn-light" id="Control" onclick="Move('MoveYDown')">Down</button></p>
             </section>
           </div>
         </div>
         <!--Photos-->
         <div class="col-lg-6 col-md-6 col-sm-12 col-xm-12">
           <div class="box">
-            <h2>Control the camera</h2><br>
+            <h2>Camera Control</h2><br>
             <section class="col-lg-12 col-md-12 col-sm-12 col-xm-12">
-              <p><button type="button" class="btn btn-outline-primary" id="StartCamara">Start Camera</button>
-              <button type="button" class="btn btn-outline-primary" id="StopCamara">Stop Camera</button></p>   
+              <p><button type="button" class="btn btn-light" id="StartCamara">Start Camera</button>
+              <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="TakePhoto">Take Photo</button></p>   
             </section>
             <section class="col-lg-12 col-md-12 col-sm-12 col-xm-12">
             <p><video src="" id="Video">
@@ -90,7 +103,7 @@
             </video></p>
             </section>
             <section class="col-lg-12 col-md-12 col-sm-12 col-xm-12">
-              <p><button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="TakePhoto">Take Photo</button></p>
+              <p><button type="button" class="btn btn-light" id="StopCamara">Stop Camera</button></p>
               <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -122,11 +135,11 @@
               <h2 id="Author">Authors</h2>
             </section>
             <section class="col-lg-6 col-md-6 col-sm-12 col-xm-12">
-              <p><img src="Ahtf.jpg" class="imgRed" alt="This is a meaningful image description" id="AuthorPhoto" class="text-center"></p>
+              <a href="mailto:aalvaradoe1300@alumno.ipn.mx"><p><img src="Ahtf.jpg" class="imgRed" alt="This is a meaningful image description" id="AuthorPhoto" class="text-center"></p></a>
               <p>Ahtziry Guadalupe Alvarado Estrada</p>
             </section>
             <section class="col-lg-6 col-md-6 col-sm-12 col-xm-12">
-              <p><img src="Ahtf.jpg" class="imgRed" alt="This is a meaningful image description" id="AuthorPhoto"></p>
+              <a href="mailto:cgils1601@alumno.ipn.mx"><p><img src="Ciro.jpeg" class="imgRed" alt="This is a meaningful image description" id="AuthorPhoto"></p></a>
               <p>Ciro Alejandro Gil Sánchez</p>
             </section>
           </div>
