@@ -155,13 +155,6 @@ img{
 	width: 460px;
 }
 
-#carouselbox{
-	width: 680px;
-}
-
-#carouselbox2{
-	width: 600px;
-}
 /*Containers end*/
 
 /*Copyright*/
@@ -175,25 +168,28 @@ img{
 	#Video{
 		width: 350px;
 	}
+
 }
 @media (min-width: 992px) and (max-width: 1199px){
 	#Video{
-		width: 490px;
+		width: 300px;
 	}
+
 }
 @media (min-width: 768px) and (max-width: 991px){
 		#Video{
-		width: 370px;
+		width: 250px;
 	}
+
 }
 @media (min-width: 480px) and (max-width: 576px){
 		#Video{
-		width: 370px;
+		width: 225px;
 	}
 }
 @media (max-width: 479px){
 	#Video{
-		width: 350px;
+		width: 175px;
 	}
 	#LookPhoto{
 	width: 350px;

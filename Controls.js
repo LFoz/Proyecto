@@ -6,28 +6,28 @@ function Move(v){
       if (MoveY==13) {
         alert("No more move");
       }else{
-        console.log(++MoveY);
+      document.getElementById('OutY').innerHTML=++MoveY;
       }
         break;
       case 'MoveYDown':
       if (MoveY==0) {
         alert("No more move");
       }else{
-        console.log(--MoveY);
+      document.getElementById('OutY').innerHTML=--MoveY;
       }
         break;
       case 'MoveXLeft':
       if (MoveX==0) {
         alert("No more move");
       }else{
-        console.log(--MoveX);
+      document.getElementById('OutX').innerHTML=--MoveX;
       }
         break;
       case 'MoveXRight':
       if (MoveX==25) {
         alert("No more move");
       }else{
-        console.log(++MoveX);
+      document.getElementById('OutX').innerHTML=++MoveX;
       }
         break;
     }
@@ -47,18 +47,22 @@ $(document).ready(function () {
     });
     do{
       for(var i = 0; i <=12; i++){
-        MoveX=MoveX+2         
+        MoveX=MoveX+2
+        document.getElementById('OutX').innerHTML=MoveX;
         console.log("Movimiento en X="+MoveX);
       }
       if (MoveX==26) {
-        MoveY=MoveY+2;        
+        MoveY=MoveY+2;
+        document.getElementById('OutY').innerHTML=MoveY;
         console.log("Y="+MoveY);
         for (var i = 0; i <=12; i++) {
         MoveX=MoveX-2;        
+        document.getElementById('OutX').innerHTML=MoveX;
         console.log("Movimiento en X="+MoveX);
         }
       }if(MoveX===0&&MoveY<14){
         MoveY=MoveY+2;        
+        document.getElementById('OutY').innerHTML=MoveY;
         console.log("Y="+MoveY);
       }
       }while(MoveY<14);
@@ -234,3 +238,4 @@ $(document).ready(function() {
     }
   });
 });
+
