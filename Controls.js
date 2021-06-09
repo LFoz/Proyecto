@@ -4,28 +4,28 @@ function Move(v){
     switch(v) {
       case 'MoveYUp':
       if (MoveY==13) {
-        alert("No more move");
+        alert("No more move/No se puede mover más");
       }else{
       document.getElementById('OutY').innerHTML=++MoveY;
       }
         break;
       case 'MoveYDown':
       if (MoveY==0) {
-        alert("No more move");
+        alert("No more move/No se puede mover más");
       }else{
       document.getElementById('OutY').innerHTML=--MoveY;
       }
         break;
       case 'MoveXLeft':
       if (MoveX==0) {
-        alert("No more move");
+        alert("No more move/No se puede mover más");
       }else{
       document.getElementById('OutX').innerHTML=--MoveX;
       }
         break;
       case 'MoveXRight':
       if (MoveX==25) {
-        alert("No more move");
+        alert("No more move/No se puede mover más");
       }else{
       document.getElementById('OutX').innerHTML=++MoveX;
       }
@@ -96,7 +96,7 @@ $(document).ready(function () {
       }
       }while(MoveY<14);
       if (MoveY==14) {
-        alert("Start to Analysis");
+        alert("Start to Analysis/Inicio del Análisis");
         MoveX=0;
         MoveY=0;
         console.log("Movimiento en X="+MoveX);
@@ -164,10 +164,10 @@ $(document).ready(function() {
     Video2.play();
     Video.unavalable = true;
     }, function () {
-    alert("Camera Not Avaiable"); //permission not granted
+    alert("Camera Not Avaiable/La cámara no esta disponible"); //permission not granted
     });      
   }else{
-    alert("The camera is on");
+    alert("The camera is on/La cámara esta encendida");
   }
   });
 
@@ -234,7 +234,7 @@ $(document).ready(function() {
       Video2.srcObject.getTracks()[0].stop();
       Video2.unavalable = false;   // Camera on
     }else{
-      alert("Camera Is Off");//Camera off
+      alert("Camera Is Off/La cámara esta apagada");//Camera off
     }
   });
 });

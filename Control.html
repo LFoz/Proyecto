@@ -19,7 +19,7 @@
     <!-- loading box-->
     <div class="d-flex justify-content-center" id="loadbox" class="col-lg-12 col-md-12 col-sm-12 col-xm-12">
       <div class="spinner-grow m-5 text-light" role="status" id="precarga" style="width: 4rem; height: 4rem;" role="status">
-       <span class="visually-hidden">Loading...</span>
+       <span class="visually-hidden">Loading/Cargando...</span>
       </div>
     </div>
     <!-- loading box end-->
@@ -37,16 +37,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" id="AutoAnalysis1">Auto Analysis</a>
+                <a class="nav-link active" aria-current="page" id="AutoAnalysis1">Auto Analysis/Análisis Automático</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Control.html">Controls</a>
+                <a class="nav-link active" aria-current="page" href="Control.html">Controls/Controles</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Photo.html">Photos</a>
+                <a class="nav-link active" aria-current="page" href="Photo.html">Photos/Fotos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#Authors">Authors</a>
+                <a class="nav-link active" aria-current="page" href="#Authors">Authors/Autores</a>
               </li>
             </ul>
             </div>
@@ -56,12 +56,12 @@
       <!--navbar end-->
 
       <!--Photos & control-->
-      <h1>Controls</h1>
+      <h1>Controls/Controles</h1>
       <!--Controls-->
       <div class="row">
         <div class="box">
           <section>
-            <a><p><button class="btn btn-light align-items-center Start" style="width: 50%" id="AutoAnalysis">Auto Analysis</button></p></a>
+            <a><p><button class="btn btn-light align-items-center Start" style="width: 50%" id="AutoAnalysis">Auto Analysis/Análisis Automático</button></p></a>
           </section>
         </div>
           <div class="box col-lg-2 col-md-2 col-sm-2 col-xm-2">
@@ -70,31 +70,31 @@
         </div>
         <div class="box col-lg-8 col-md-8 col-sm-8 col-xm-8">
           <section class="align-items-center" id="Databox">
-              Data:<br>
-              <h5>Greenhouse temperature:<br>
-              System temperature:<br>
-              X position:<output id="OutX"></output><br>
-              Y position:<output id="OutY"></output></h5>
+              Data/Información:<br>
+              <h5>Greenhouse temperature/Temperatura del invernadero:<br>
+              System temperature/Temperatura del sistema:<br>
+              X position/Posición en X:<output id="OutX"></output><br>
+              Y position/Posición en Y:<output id="OutY"></output></h5>
           </section>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xm-12">
           <div class="box">
-            <h2>Move robot</h2><br>
+            <h2>Move robot/Movimiento del robot</h2><br>
             <section>
-              <p><button type="button" class="btn btn-light" id="Control" onclick="Move('MoveYUp')">Up</button></p>
-              <br><p><button type="button" class="btn btn-light" id="Control" onclick="Move('MoveXLeft')">Left</button>
-              <button type="button" class="btn btn-light" id="Control" onclick="Move('MoveXRight')">Right</button></p><br>
-              <p><button type="button" class="btn btn-light" id="Control" onclick="Move('MoveYDown')">Down</button></p>
+              <p><button type="button" class="btn btn-light" id="Control" onclick="Move('MoveYUp')">Up/Arriba</button></p>
+              <br><p><button type="button" class="btn btn-light" id="Control" onclick="Move('MoveXLeft')">Left/Izquierda</button>
+              <button type="button" class="btn btn-light" id="Control" onclick="Move('MoveXRight')">Right/Derecha</button></p><br>
+              <p><button type="button" class="btn btn-light" id="Control" onclick="Move('MoveYDown')">Down/Abajo</button></p>
             </section>
           </div>
         </div>
         <!--Photos-->
         <div class="col-lg-6 col-md-6 col-sm-12 col-xm-12">
           <div class="box">
-            <h2>Camera control</h2><br>
+            <h2>Camera control/Control de la cámara</h2><br>
             <section class="col-lg-12 col-md-12 col-sm-12 col-xm-12">
-              <p><button type="button" class="btn btn-light" id="StartCamara">Start Camera</button>
-              <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="TakePhoto">Take Photo</button></p>   
+              <p><button type="button" class="btn btn-light" id="StartCamara">Start Camera/Iniciar Cámara</button>
+              <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="TakePhoto">Take Photo/Tomar Foto</button></p>   
             </section>
             <section class="col-lg-12 col-md-12 col-sm-12 col-xm-12">
             <p><video src="" id="Video">
@@ -103,21 +103,21 @@
             </video></p>
             </section>
             <section class="col-lg-12 col-md-12 col-sm-12 col-xm-12">
-              <p><button type="button" class="btn btn-light" id="StopCamara">Stop Camera</button></p>
+              <p><button type="button" class="btn btn-light" id="StopCamara">Stop Camera/Apagar Cámara</button></p>
               <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Photograph</h5>
+                        <h5 class="modal-title" id="staticBackdropLabel">Photograph/Fotografía</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                     <div class="modal-body">
-                      <h5 id="CamOff">The Camera is Off</h5>
+                      <h5 id="CamOff">The Camera is Off/La cámara esta apagada</h5>
                       <canvas id="LookPhoto" width="640" height="480"></canvas>
                       <canvas id="LookPhoto2" width="640" height="480" style="display: none"></canvas>
                    </div>
                     <div class="modal-footer" id="buttonbox">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Again</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Again/De Nuevo</button>
                     </div>
                   </div>
                 </div>
@@ -132,7 +132,7 @@
         <div class="container">
           <div class="row">
             <section class="col-lg-12 col-md-12 col-sm-12 col-xm-12"> 
-              <h2 id="Author">Authors</h2>
+              <h2 id="Author">Authors/Autores</h2>
             </section>
             <section class="col-lg-6 col-md-6 col-sm-12 col-xm-12">
               <a href="mailto:aalvaradoe1300@alumno.ipn.mx"><p><img src="Aht.jpeg" class="imgRed" alt="This is a meaningful image description" id="AuthorPhoto" class="text-center"></p></a>
